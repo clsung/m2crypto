@@ -130,6 +130,15 @@ extern const EVP_CIPHER *EVP_aes_256_cfb(void);
 %rename(aes_256_ofb) EVP_aes_256_ofb;
 extern const EVP_CIPHER *EVP_aes_256_ofb(void);
 
+#if OPENSSL_VERSION_NUMBER >= 0x1000103fL
+%rename(aes_128_ctr) EVP_aes_128_ctr;
+extern const EVP_CIPHER *EVP_aes_128_ctr(void);
+%rename(aes_192_ctr) EVP_aes_192_ctr;
+extern const EVP_CIPHER *EVP_aes_192_ctr(void);
+%rename(aes_256_ctr) EVP_aes_256_ctr;
+extern const EVP_CIPHER *EVP_aes_256_ctr(void);
+#endif
+
 %rename(cipher_set_padding) EVP_CIPHER_CTX_set_padding;
 extern int EVP_CIPHER_CTX_set_padding(EVP_CIPHER_CTX *, int);
 
