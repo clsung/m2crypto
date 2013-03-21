@@ -129,7 +129,7 @@ if sys.version_info < (2,4):
 
 m2crypto = Extension(name = 'M2Crypto.__m2crypto',
                      sources = ['SWIG/_m2crypto.i'],
-                     extra_compile_args = ['-DTHREADING'],
+                     extra_compile_args = ['-DTHREADING', '/MT'],
                      #extra_link_args = ['-Wl,-search_paths_first'], # Uncomment to build Universal Mac binaries
                      )
 
